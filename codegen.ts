@@ -6,12 +6,9 @@ const config: CodegenConfig = {
   documents: ['src/**/*.{ts,tsx}'],
   ignoreNoDocuments: true,
   generates: {
-    './src/__generated__/': {
+    './src/gql/': {
       preset: 'client',
       plugins: [],
-      presetConfig: {
-        gqlTagName: 'gql',
-      }
     }
   },
 };
