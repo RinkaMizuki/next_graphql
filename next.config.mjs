@@ -7,6 +7,9 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true
+  },
+  env: {
+    NEXT_PRIVATE_API_URL: "http://localhost:3000"
   }
 };
 

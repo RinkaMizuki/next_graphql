@@ -26,6 +26,8 @@ interface PageInfo {
   __typename: 'PageInfo'; // Optional
   hasNextPage: boolean;
   endCursor: string | null; // Use null if there can be no next cursor
+  hasPreviousPage: boolean;
+  startCursor: string | null;
 }
 
 // Define types for the posts connection
@@ -33,6 +35,7 @@ interface PostsConnection {
   __typename: 'PostsConnection'; // Optional
   edges: PostsEdge[]; // Array of post edges
   pageInfo: PageInfo; // Pagination info
+  totalCount: number;
 }
 
 // Define the main type for the GraphQL query response
